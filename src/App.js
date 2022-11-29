@@ -22,7 +22,7 @@ function App() {
   return (
     
     <div className="main-container">
-      <Header username={'Tesfatsion'}/>
+      <Header username={'Tesfa'}/>
       <OnSaleItemsList onSaleItems={onSaleItems} />
     </div>
   );
