@@ -1,8 +1,12 @@
-import logo from './logo.svg';
+
 import Header from './components/Header'
-import React, { useState, useEffect } from 'react';
 import './App.css';
 import OnSaleItemsList from './components/OnSaleItemsList';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Pricing from './pages/Pricing';
+import About from './pages/About';
+import {Route, Routes} from 'react-router-dom'
 
 function fetchOnSaleItems(){
   console.log("Hello")
@@ -10,20 +14,17 @@ function fetchOnSaleItems(){
 
 // http://127.0.0.1:8000/api/onsale-items/
 function App() {
-  const [onSaleItems, setOnSaleItems] = useState([]);
-  useEffect(() => {
-    fetch('https://btonmarketapi.herokuapp.com/api/onsale-items/')
-    .then((response) => response.json())
-    .then(data => 
-      //console.log(data)
-     setOnSaleItems(data)
-      )
- }, []);
+  //console.log(window.location)
   return (
-    
     <div className="main-container">
-      <Header username={'Tesfa'}/>
-      <OnSaleItemsList onSaleItems={onSaleItems} />
+      <Navbar />
+      <div className='container'>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/pricing' element={<Pricing />} />
+          <Route path='/about' element={<About />} />
+        </Routes>
+      </div>
     </div>
   );
 }
