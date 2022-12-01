@@ -21,7 +21,6 @@ const Sell = () => {
   const [negotiable, setNegotiable] = useState(false)
   const [sold, setSold] = useState(false)
   const [img, setImg] = useState('')
-  //const [postData, setPostData] = useState({})
 
   const clearInputeFields = () =>{
     setName('')
@@ -58,17 +57,15 @@ const Sell = () => {
         console.log(err.message);
       })
   }
-  //Todo: condition should be a radio button
   return (
     <div className='create'>
       <h2>Sell Item</h2>
       <form onSubmit={handleSubmit}>
-        <label>Item Name:</label>
+        <label className='sell-lable'>Item Name:</label>
         <input type='text' required value={name} onChange={(e) => setName(e.target.value)}/>
         <label>Seller name</label>
         <input type='text' required value={seller} onChange={(e) => setSeller(e.target.value)}/>
         <label>Condition</label>
-        {/* <input type='text' required value={condition} onChange={(e) => setCondition(e.target.value)}/> */}
         <select value={condition} onChange={(e) => setCondition(e.target.value)}>
           <option value='Old'>Old</option>
           <option value='Good'>Good</option>
@@ -78,8 +75,6 @@ const Sell = () => {
         </select>
         <label>Price</label>
         <input type='text' required value={price} onChange={(e) => setPrice(e.target.value)}/>
-        {/* <label>Negotiable</label> */}
-        {/* <input type='text' value={negotiable} onChange={(e) => setNegotiable(e.target.value)}/> */}
         <div className='radio-button' required onChange={(e) => setNegotiable(e.target.value)}>
           <input type='radio' value={true} name='negotiate' /> Negotiable
           <input type='radio' value={false} name='negotiate' /> Non-Negotiable
@@ -87,7 +82,7 @@ const Sell = () => {
 
         <label>Img id</label>
         <input type='text' required value={img} onChange={(e) => setImg(e.target.value)}/>
-        <button>Put on Sell</button>
+        <button className='submit-button'>Put on Sell</button>
       </form>
     </div>
   )
