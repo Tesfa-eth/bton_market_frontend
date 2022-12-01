@@ -23,6 +23,16 @@ const Sell = () => {
   const [img, setImg] = useState('')
   //const [postData, setPostData] = useState({})
 
+  const clearInputeFields = () =>{
+    setName('')
+    setSeller('')
+    setCondition('')
+    setPrice(0.0)
+    setNegotiable(false)
+    setSold(false)
+    setImg('')
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault()
     const sellItemInfo = {
@@ -40,6 +50,7 @@ const Sell = () => {
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify(sellItemInfo) })
       .then((response) => response.json())
+      .then(clearInputeFields())
       .then((data) =>{
         console.log(data);
       })
