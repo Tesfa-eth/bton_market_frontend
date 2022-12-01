@@ -1,18 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
-
-//sample post request
-// {
-//   "id": 3,
-//   "name": "Car",
-//   "seller": "Tesfatsion Shiferaw",
-//   "condition": "Great",
-//   "price": "3000.00",
-//   "negotiable": false,
-//   "sold": true,
-//   "img": "https://img.freepik.com/premium-photo/generic-brandless-modern-sport-car_110488-1758.jpg?w=2000"
-// }
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Sell = () => {
   const [name, setName] = useState('');
   const [seller, setSeller] = useState('')
@@ -21,6 +10,8 @@ const Sell = () => {
   const [negotiable, setNegotiable] = useState(false)
   const [sold, setSold] = useState(false)
   const [img, setImg] = useState('')
+
+  //const toastOnSubmission = () => toast("Your item is on sale now. Buyers will be reaching out to you soon!");
 
   const clearInputeFields = () =>{
     setName('')
@@ -52,7 +43,7 @@ const Sell = () => {
       .then(clearInputeFields())
       .then((data) =>{
         //console.log(data);
-        alert("Your item is on sale now. Buyers will be reaching out to you soon!");
+        alert("Your item is on sale now. Buyers will be reaching out to you soon!")
       })
       .catch((err) =>{
         console.log(err.message);
