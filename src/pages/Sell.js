@@ -78,8 +78,13 @@ const Sell = () => {
         </select>
         <label>Price</label>
         <input type='text' required value={price} onChange={(e) => setPrice(e.target.value)}/>
-        <label>Negotiable</label>
-        <input type='text' value={negotiable} onChange={(e) => setNegotiable(e.target.value)}/>
+        {/* <label>Negotiable</label> */}
+        {/* <input type='text' value={negotiable} onChange={(e) => setNegotiable(e.target.value)}/> */}
+        <div className='radio-button' required onChange={(e) => setNegotiable(e.target.value)}>
+          <input type='radio' value={true} name='negotiate' /> Negotiable
+          <input type='radio' value={false} name='negotiate' /> Non-Negotiable
+        </div>
+
         <label>Img id</label>
         <input type='text' required value={img} onChange={(e) => setImg(e.target.value)}/>
         <button>Put on Sell</button>
