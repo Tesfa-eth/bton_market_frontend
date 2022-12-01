@@ -4,8 +4,8 @@ import './App.css';
 import OnSaleItemsList from './components/OnSaleItemsList';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import Pricing from './pages/Pricing';
-import About from './pages/About';
+import Categories from './pages/Categories';
+import Profile from './pages/Profile'
 import {Route, Routes} from 'react-router-dom'
 
 function fetchOnSaleItems(){
@@ -21,8 +21,8 @@ function App() {
       <div className='container'>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/pricing' element={<Pricing />} />
-          <Route path='/about' element={<About />} />
+          <Route path='/categories' element={<Categories />} />
+          <Route path='/profile' element={<Profile />} />
         </Routes>
       </div>
     </div>
