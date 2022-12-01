@@ -51,7 +51,8 @@ const Sell = () => {
       .then((response) => response.json())
       .then(clearInputeFields())
       .then((data) =>{
-        console.log(data);
+        //console.log(data);
+        alert("Your item is on sale now. Buyers will be reaching out to you soon!");
       })
       .catch((err) =>{
         console.log(err.message);
