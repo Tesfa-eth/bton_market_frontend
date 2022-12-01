@@ -68,11 +68,18 @@ const Sell = () => {
         <label>Seller name</label>
         <input type='text' required value={seller} onChange={(e) => setSeller(e.target.value)}/>
         <label>Condition</label>
-        <input type='text' required value={condition} onChange={(e) => setCondition(e.target.value)}/>
+        {/* <input type='text' required value={condition} onChange={(e) => setCondition(e.target.value)}/> */}
+        <select value={condition} onChange={(e) => setCondition(e.target.value)}>
+          <option value='Old'>Old</option>
+          <option value='Good'>Good</option>
+          <option value='Nice'>Nice</option>
+          <option value='Excellent'>Excellent</option>
+          <option value='Brand new'>Brand new</option>
+        </select>
         <label>Price</label>
         <input type='text' required value={price} onChange={(e) => setPrice(e.target.value)}/>
         <label>Negotiable</label>
-        <input type='text' required value={negotiable} onChange={(e) => setNegotiable(e.target.value)}/>
+        <input type='text' value={negotiable} onChange={(e) => setNegotiable(e.target.value)}/>
         <label>Img id</label>
         <input type='text' required value={img} onChange={(e) => setImg(e.target.value)}/>
         <button>Put on Sell</button>
