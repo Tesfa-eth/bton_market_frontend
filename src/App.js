@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Categories from './pages/Categories';
 import Profile from './pages/Profile'
+import Sell from './pages/Sell'
 import {Route, Routes} from 'react-router-dom'
 
 function fetchOnSaleItems(){
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/categories' element={<Categories />} />
+          <Route path='/sell' element={<Sell />} />
           <Route path='/profile' element={<Profile />} />
         </Routes>
       </div>

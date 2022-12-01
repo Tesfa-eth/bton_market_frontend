@@ -5,6 +5,7 @@ const Navbar = () => {
         <Link to='/' className='site-title'>Bton Market</Link>
         <ul>
             <CustomLink to='/categories'>Categories</CustomLink>
+            <CustomLink to='/sell'>Sell</CustomLink>
             <CustomLink to='/profile'>Profile</CustomLink>
         </ul>
         </nav>
