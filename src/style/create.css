@@ -1,3 +1,8 @@
+.sell-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .create {
     width: 20rem;
     border-radius: 5px;

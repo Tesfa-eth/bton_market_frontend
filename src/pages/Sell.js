@@ -58,13 +58,14 @@ const Sell = () => {
       })
   }
   return (
+    <div className='sell-container'>
     <div className='create'>
       <h2>Sell Item</h2>
       <form onSubmit={handleSubmit}>
-        <label className='sell-lable'>Item Name:</label>
-        <input type='text' required value={name} onChange={(e) => setName(e.target.value)}/>
+        <label className='sell-lable'>Item Name</label>
+        <input type='text' required placeholder='Item name' value={name} onChange={(e) => setName(e.target.value)}/>
         <label>Seller name</label>
-        <input type='text' required value={seller} onChange={(e) => setSeller(e.target.value)}/>
+        <input type='text' required value={seller} placeholder='John Wick' onChange={(e) => setSeller(e.target.value)}/>
         <label>Condition</label>
         <select value={condition} onChange={(e) => setCondition(e.target.value)}>
           <option value='Old'>Old</option>
@@ -74,16 +75,17 @@ const Sell = () => {
           <option value='Brand new'>Brand new</option>
         </select>
         <label>Price</label>
-        <input type='text' required value={price} onChange={(e) => setPrice(e.target.value)}/>
+        <input type='text' required value={price} placeholder='enter price' onChange={(e) => setPrice(e.target.value)}/>
         <div className='radio-button' required onChange={(e) => setNegotiable(e.target.value)}>
           <input type='radio' value={true} name='negotiate' /> Negotiable
           <input type='radio' value={false} name='negotiate' /> Non-Negotiable
         </div>
 
-        <label>Img id</label>
-        <input type='text' required value={img} onChange={(e) => setImg(e.target.value)}/>
+        <label>Image id</label>
+        <input type='text' required value={img} placeholder='https://www.google.com/image' onChange={(e) => setImg(e.target.value)}/>
         <button className='submit-button'>Put on Sell</button>
       </form>
+    </div>
     </div>
   )
 }
