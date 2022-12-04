@@ -1,5 +1,3 @@
-
-import Header from './components/Header'
 import './App.css';
 import OnSaleItemsList from './components/OnSaleItemsList';
 import Navbar from './components/Navbar';
@@ -8,10 +6,6 @@ import Categories from './pages/Categories';
 import Profile from './pages/Profile'
 import Sell from './pages/Sell'
 import {Route, Routes} from 'react-router-dom'
-
-function fetchOnSaleItems(){
-  console.log("Hello")
-}
 
 // http://127.0.0.1:8000/api/onsale-items/
 function App() {
