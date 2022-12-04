@@ -30,7 +30,9 @@ const Home = () => {
   return (
     <>
       <Header username={'Tesfa'}/>
+      <div className='search'>
       <input type='text'  placeholder='What are you looking for?' className="search" onChange={(e) => inputHandler(e)}/>
+      </div>
       <OnSaleItemsList onSaleItems={onSaleItems} />
     </>
   )
